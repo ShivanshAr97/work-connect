@@ -4,7 +4,7 @@ import Link from "next/link"
 import axios from "axios"
 import React,{useEffect, useState} from "react"
 
-export default function verifyEmailPage() {
+export default function VerifyEmailPage() {
 
     const [token, setToken] = useState("")
     const [isVerified, setIsVerified] = useState(false)

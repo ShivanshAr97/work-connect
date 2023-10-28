@@ -3,7 +3,7 @@
 import axios from "axios"
 import React,{useEffect, useState} from "react"
 
-export default function verifyEmailPage() {
+export default function ForgotPasswordPage() {
 
     const [token, setToken] = useState("")
     const [password, setPassword] = useState("")
