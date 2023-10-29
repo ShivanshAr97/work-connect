@@ -9,7 +9,7 @@ export async function GET(request:NextRequest){
 
     try {
         const userId = await getData(request);
-        const user = await User.findOne({_id: userId}).select("-password");
+        const user = await User.findOne({_id: userId});
         return NextResponse.json({
             message: "User found",
             data: user

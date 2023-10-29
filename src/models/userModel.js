@@ -19,9 +19,73 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
+    profilePhoto: {
+        type: String,
+        default: "https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg"
+    },
+    video: {
+        type: String
+    },
+    role: {
+        type: String
+    },
+    about: {
+        type: String
+    },
+    achievements: {
+        type: String
+    },
+    links: [
+        {
+            github: {
+                type: String,
+            },
+            leetcode: {
+                type: String,
+            },
+            behance: {
+                type: String,
+            },
+            dribble: {
+                type: String,
+            },
+            medium: {
+                type: String,
+            },
+            blog: {
+                type: String,
+            },
+            facebook: {
+                type: String,
+            },
+            instagram: {
+                type: String,
+            },
+            youtube: {
+                type: String,
+            },
+        },
+    ],
+    projects: {
+        title: {
+            type: String
+        },
+        description: {
+            type: String
+        },
+        video: {
+            type: String
+        },
+        links: [
+            {
+                type: {
+                    type: String, // 'github' or 'hosted' or other types
+                },
+                url: {
+                    type: String,
+                },
+            },
+        ],
     },
     forgetPasswordToken: {
         type: String
