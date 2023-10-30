@@ -27,7 +27,8 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     role: {
-        type: String
+        type: String,
+        default: "none"
     },
     about: {
         type: String
@@ -35,37 +36,36 @@ const userSchema = new mongoose.Schema({
     achievements: {
         type: String
     },
-    links: [
-        {
-            github: {
-                type: String,
-            },
-            leetcode: {
-                type: String,
-            },
-            behance: {
-                type: String,
-            },
-            dribble: {
-                type: String,
-            },
-            medium: {
-                type: String,
-            },
-            blog: {
-                type: String,
-            },
-            facebook: {
-                type: String,
-            },
-            instagram: {
-                type: String,
-            },
-            youtube: {
-                type: String,
-            },
+    links:
+    {
+        github: {
+            type: String,
         },
-    ],
+        leetcode: {
+            type: String,
+        },
+        behance: {
+            type: String,
+        },
+        dribble: {
+            type: String,
+        },
+        medium: {
+            type: String,
+        },
+        blog: {
+            type: String,
+        },
+        facebook: {
+            type: String,
+        },
+        instagram: {
+            type: String,
+        },
+        youtube: {
+            type: String,
+        },
+    },
     projects: {
         title: {
             type: String

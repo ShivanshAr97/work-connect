@@ -86,6 +86,7 @@ export default function Profile() {
           
           <label htmlFor="roles">Role: </label>
             <select name="role" id="role" onChange={(e)=>setData({...data, role:e.target.value})} disabled={!editable}>
+              <option value="none">Select one</option>
               <option value="developer">Developer</option>
               <option value="designer">Designer</option>
               <option value="content specialist">Content Specialist</option>
