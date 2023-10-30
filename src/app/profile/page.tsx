@@ -69,86 +69,90 @@ export default function Profile() {
   }, []);
 
   return (
-    <div>
-      Profile
-      <button onClick={logout}>Logout</button>
-
+    <div className="m-12">
+      <div className='flex justify-between items-center align-middle mb-8'>
+      <h1 className="text-4xl">Your Profile</h1>
+      <button className="border bg-red-500 px-2 py-1 rounded-md font-medium"  onClick={logout}>Logout</button>
+      </div>
       {data ? 
       <>
-        <p>Name:  
-          <input className="opacity-40" type="text" value={data.name} onChange={(e)=>setData({...data, name:e.target.value})} disabled /></p>
-          <p>Email:  
-          <input className="opacity-40" type="text" value={data.email} onChange={(e)=>setData({...data, email:e.target.value})} disabled /></p>
-          <p>Password:  
-          <input className="opacity-40" type="password" value={data.password} onChange={(e)=>setData({...data, password:e.target.value})} disabled /></p>
-          <p>Video:  
-          <input className={editable?"":"opacity-40"} type="url" pattern=".*\youtube.com\.*" onChange={(e)=>setData({...data, video:e.target.value})} disabled={!editable} /></p>
+        <p className='my-4'>Name:  
+          <input className="mx-8 border-2 rounded-md px-2 py-1 opacity-40" type="text" value={data.name} onChange={(e)=>setData({...data, name:e.target.value})} disabled /></p>
+          <p className='my-4'>Email:  
+          <input className="opacity-40 mx-8 border-2 rounded-md px-2 py-1" type="text" value={data.email} onChange={(e)=>setData({...data, email:e.target.value})} disabled /></p>
+          <p className='my-4'>Video:  
+          <input className={editable?"mx-8 border-2 rounded-md px-2 py-1":" mx-8 border-2 rounded-md px-2 py-1 opacity-40"} type="url" pattern=".*\youtube.com\.*" onChange={(e)=>setData({...data, video:e.target.value})} disabled={!editable} /></p>
           
-          <label htmlFor="roles">Role: </label>
-            <select name="role" id="role" onChange={(e)=>setData({...data, role:e.target.value})} disabled={!editable}>
+          <label className='my-4' htmlFor="roles">Role: </label>
+            <select className='mx-8 border-2 rounded-md px-2 py-1' name="role" id="role" onChange={(e)=>setData({...data, role:e.target.value})} disabled={!editable}>
               <option value="none">Select one</option>
               <option value="developer">Developer</option>
               <option value="designer">Designer</option>
               <option value="content specialist">Content Specialist</option>
               <option value="product managers">Product Managers</option>
             </select>
+
+            <p className='my-4'>About:</p>
+
+          <textarea className={editable?" border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows="5" cols="90" value={data.about} onChange={(e)=>setData({...data, about:e.target.value})} disabled={!editable} />
+          <p className='my-4'>Achievements:  </p>
+          <textarea className={editable?"border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows="5" cols="90" value={data.achievements} onChange={(e)=>setData({...data, achievements:e.target.value})} disabled={!editable} />
             
             {data.role === "designer" && (
-                <>
-                  <p>Behance</p>
+                <div className='flex items-center align-middle'>
+                  <p className='my-4'>Behance</p>
                   
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, behance: e.target.value } })} disabled={!editable} pattern=".*\behance.com\.*"/>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, behance: e.target.value } })} disabled={!editable} pattern=".*\behance.com\.*"/>
                   <br />
-                  <p>Dribbble</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, dribble: e.target.value } })}  disabled={!editable} pattern=".*\dribble.com\.*"/>
+                  <p className='my-4'>Dribbble</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, dribble: e.target.value } })}  disabled={!editable} pattern=".*\dribble.com\.*"/>
                   <br />
-                </>
+                </div>
               )
             }
             {data.role === "developer" && (
-                <>
-                  <p>GitHub</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, github: e.target.value } })}  disabled={!editable} pattern=".*\github.com\.*"/>
+                <div className='flex items-center align-middle'>
+                  <p className='my-4'>GitHub</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, github: e.target.value } })}  disabled={!editable} pattern=".*\github.com\.*"/>
                   <br />
-                  <p>StackOverflow</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, stackoverflow: e.target.value } })}  disabled={!editable} pattern=".*\stackoverflow.com\.*"/>
+                  <p className='my-4'>StackOverflow</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, stackoverflow: e.target.value } })}  disabled={!editable} pattern=".*\stackoverflow.com\.*"/>
                   <br />
-                  <p>LeetCode</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, leetcode: e.target.value } })}  disabled={!editable} pattern=".*\leetcode.com\.*"/>
-                </>
+                  <p className='my-4'>LeetCode</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, leetcode: e.target.value } })}  disabled={!editable} pattern=".*\leetcode.com\.*"/>
+                </div>
               )
             }
             {data.role === "content specialist" && (
-                <>
-                  <p>Medium</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, medium: e.target.value } })}  disabled={!editable} pattern=".*\medium.com\.*"/>
+                <div className='flex items-center align-middle'>
+                  <p className='my-4'>Medium</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, medium: e.target.value } })}  disabled={!editable} pattern=".*\medium.com\.*"/>
                   <br />
-                  <p>Blog</p>
-                  <input type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, blog: e.target.value } })}  disabled={!editable}/>
-                </>
+                  <p className='my-4'>Blog</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url"  onChange={(e) => setData({ ...data, links: { ...data.links, blog: e.target.value } })}  disabled={!editable}/>
+                </div>
               )
             }
             {data.role === "product managers" && (
-                <>
-                  <p>Facebook</p>
-                  <input type="url" onChange={(e) => setData({ ...data, links: { ...data.links, facebook: e.target.value } })}  disabled={!editable} pattern=".*\facebook.com\.*"/>
+                <div className='flex items-center align-middle'>
+                  <p className='my-4'>Facebook</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url" onChange={(e) => setData({ ...data, links: { ...data.links, facebook: e.target.value } })}  disabled={!editable} pattern=".*\facebook.com\.*"/>
                   <br />
-                  <p>Instagram</p>
-                  <input type="url" onChange={(e) => setData({ ...data, links: { ...data.links, instagram: e.target.value } })}  disabled={!editable} pattern=".*\instagram.com\.*"/>
+                  <p className='my-4'>Instagram</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url" onChange={(e) => setData({ ...data, links: { ...data.links, instagram: e.target.value } })}  disabled={!editable} pattern=".*\instagram.com\.*"/>
                   <br />
-                  <p>Youtube</p>
-                  <input type="url" onChange={(e) => setData({ ...data, links: { ...data.links, youtube: e.target.value } })}  disabled={!editable} pattern=".*\youtube.com\.*"/>
-                </>
+                  <p className='my-4'>Youtube</p>
+                  <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url" onChange={(e) => setData({ ...data, links: { ...data.links, youtube: e.target.value } })}  disabled={!editable} pattern=".*\youtube.com\.*"/>
+                </div>
               )
             }
-          <p>About:  
-          <input className={editable?"":"opacity-40"} type="text" value={data.about} onChange={(e)=>setData({...data, about:e.target.value})} disabled={!editable} /></p>
-          <p>Achievements:  
-          <input className={editable?"":"opacity-40"} type="text" value={data.achievements} onChange={(e)=>setData({...data, achievements:e.target.value})} disabled={!editable} /></p>
+          
       </>
       : <p>Loading...</p>}
-      <button onClick={editSettings}>Edit</button>
-      <button onClick={saveChanges}>Save</button>
+      <br />
+
+      <button className="border bg-blue-500 px-2 py-1 rounded-md font-medium my-4" onClick={editSettings}>Edit</button>
+      <button className="border bg-green-500 px-2 py-1 rounded-md font-medium mx-4" onClick={saveChanges}>Save</button>
     </div>
   );
 }

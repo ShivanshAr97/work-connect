@@ -47,17 +47,29 @@ export default function Login() {
   
 
   return (
-    <>
-        <h1>{loading?"Processing":"Login"}</h1>
+    <div className="m-12">
+        <h1 className="text-4xl mb-8">{loading?"Processing":"Login"}</h1>
+        <hr />
+            <hr />
+            <div className="my-8">
         <label htmlFor="name">Name</label>
-        <input placeholder='' type="text" value={user.name} onChange={(e)=>setUser({...user, name:e.target.value})}/>
+        <br />
+        <input className="border-2 my-2 rounded-md outline-none px-2 py-1" placeholder='Enter your name' type="text" value={user.name} onChange={(e)=>setUser({...user, name:e.target.value})}/>
+        <br />
+        <br />
         <label htmlFor="name">Email</label>
-        <input placeholder='' type="email" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})}/>
+        <br />
+        <input className="border-2 my-2 rounded-md outline-none px-2 py-1" placeholder='Enter your email' type="email" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})}/>
+        <br />
+        <br />
         <label htmlFor="name">Password</label>
-        <input placeholder='' type="password" value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})}/>
-        <button onClick={onLogin}>{disabled?"No":"Log in"}</button>
-        <Link href="/signup">Sign Up</Link>
+        <br />
+        <input className="border-2 my-2 rounded-md outline-none px-2 py-1" placeholder='Enter your password' type="password" value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})}/>
+        <br />
+        <button className="border bg-red-500 mt-4 px-2 py-1 rounded-md font-medium" onClick={onLogin}>Log in</button>
+        </div>
+        <Link href="/signup" className='text-blue-600 font-medium'>Sign Up instead</Link>
         <ToastContainer />
-    </>
+    </div>
   )
 }

@@ -78,7 +78,7 @@ export default function UserProfile({ params }: any) {
             <p className='text-xs'>Role: </p>
           <p className='capitalize text-lg'>{user.role}</p>
           <p className='my-2 text-xs'>Video: </p>
-          <iframe className='mx-auto rounded-md my-4' width="400" height="250" src={newVideo} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          {newVideo &&<iframe className='mx-auto rounded-md my-4' width="400" height="250" src={newVideo} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
           <p className='my-2 text-xs'>About:</p>
           <p> {user.about}</p>
           <p className='my-2 text-xs'>Achievements:</p>

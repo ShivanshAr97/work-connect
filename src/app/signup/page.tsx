@@ -43,17 +43,26 @@ export default function Signup() {
   }, [user])
   
   return (
-    <>
-        <h1>{loading?"Processing":"Sign Up"}</h1>
-        <label htmlFor="name">Email</label>
-        <input placeholder='' type="email" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})}/>
-        <label htmlFor="name">Password</label>
-        <input placeholder='' type="password" value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})}/>
-        <button onClick={onSignUp}>{disabled?"No":"Sign up"}</button>
-        <Link href="/login">Log in</Link>
+    <div className="m-12">
+        <h1 className="text-4xl mb-8">{loading?"Processing":"Sign Up"}</h1>
+        <hr />
+            <hr />
+            <div className="my-8">
+        <label htmlFor="name">Email: </label>
         <br />
-        <Link href="/resetpassword">Forgot Password</Link>
+        <input className="border-2 my-2 rounded-md outline-none px-2 py-1" placeholder='Enter email address' type="email" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})}/>
+        <br />
+        <br />
+        <label htmlFor="name">Password</label>
+        <br />
+        <input className="border-2 my-2 rounded-md outline-none px-2 py-1" placeholder='Enter password' type="password" value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})}/>
+        <Link href="/resetpassword" className='text-sm mx-12'>Forgot Password</Link>
+        <br />
+        <button className="border bg-red-500 mt-4 px-2 py-1 rounded-md font-medium" onClick={onSignUp}>Sign up</button>
+        </div>
+        <Link href="/login" className='text-blue-600 font-medium'>Log in instead</Link>
+        <br />
         <ToastContainer />
-    </>
+    </div>
   )
 }

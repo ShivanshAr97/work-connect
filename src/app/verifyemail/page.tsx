@@ -39,10 +39,11 @@ export default function VerifyEmailPage() {
     }, [token]);
 
     return(
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-
-            <h1 className="text-4xl">Verify Email</h1>
-            <h2 className="p-2 bg-orange-500 text-black">{token ? `${token}` : "no token"}</h2>
+        <div className="m-12">
+        <h1 className="text-4xl mb-8">Verify Email</h1>
+        <hr />
+            <hr />
+            <div className="my-8">
 
             {isVerified && (
                 <div>
@@ -58,6 +59,8 @@ export default function VerifyEmailPage() {
                     
                 </div>
             )}
+            </div>
+            <Link href="/"><button className='text-blue-600 font-medium'>Return to home page</button></Link>
             <ToastContainer />
         </div>
     )
