@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function UserProfile({ params }: any) {
   const [id, setId] = useState("")
@@ -45,12 +46,10 @@ export default function UserProfile({ params }: any) {
       console.log(userData);
       
       setUser(userData.data);
-      const video = userData.data.video
-      const wVideo = video.replace("watch", "embed");
-      setNewVideo(wVideo)
-      console.log(wVideo);
-      
-      
+      // const video = userData.data.video
+      // const wVideo = video.replace("watch", "embed");
+      // setNewVideo(wVideo)
+      // console.log(wVideo);
 
     } catch (error:any) {
       console.log("An error occurred: ", error.message);
@@ -75,55 +74,45 @@ export default function UserProfile({ params }: any) {
             </div>
 
             </div>
-            <p className='text-xs'>Role: </p>
+            <p className='text-xs mt-4'>Role: </p>
           <p className='capitalize text-lg'>{user.role}</p>
           <p className='my-2 text-xs'>Video: </p>
-          {newVideo &&<iframe className='mx-auto rounded-md my-4' width="400" height="250" src={newVideo} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
+          {user.video &&<iframe className='mx-auto rounded-md my-4' width="400" height="250" src={user.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
           <p className='my-2 text-xs'>About:</p>
           <p> {user.about}</p>
           <p className='my-2 text-xs'>Achievements:</p>
           <p> {user.achievements}</p>
           <p className='my-2 text-xs'>Links</p>
-      {user.role === "developer" && (
+      {user.role === "developer"&& user.links && (
         <div>
-        {<div>
-          <p>Github:</p>
-          <p>{user.links.github}</p>
-          <p>Stackoverflow:</p>
-          <p>{user.links.stackoverflow}</p>
-          <p>Leetcode:</p>
-          <p>{user.links.leetcode}</p>
+        {<div className='flex'>          
+          <a href={`${user.links.github}`}><p>GitHub</p></a>
+          <a className='mx-12' href={`${user.links.stackoverflow}`}><p>StackOverflow</p></a>
+          <a href={`${user.links.leetcode}`}><p>LeetCode</p></a>
         </div>}
     </div>)}
-  {user.role === "designer" && (
+  {user.role === "designer"&& user.links && (
     <div>
-        {<div>
-          <p>Behance:</p>
-          <p>{user.links.behance}</p>
-          <p>Dribble:</p>
-          <p>{user.links.dribble}</p>
+        {<div className='flex'>
+          <a href={`${user.links.behance}`}><p>Behance</p></a>
+          <a className='mx-12' href={`${user.links.dribble}`}><p>Dribbble</p></a>
         </div>}
     </div>)}
 
-  {user.role === "content specialist" && (
+  {user.role === "content specialist"&& user.links && (
     <div>
-        {<div>
-          <p>Medium:</p>
-          <p>{user.links.medium}</p>
-          <p>Blog:</p>
-          <p>{user.links.blog}</p>
+        {<div className='flex'>
+          <a href={`${user.links.medium}`}><p>Medium</p></a>
+          <a className='mx-12' href={`${user.links.blog}`}><p>Blog</p></a>
         </div>}
     </div>)}
 
-  {user.role === "product managers" && (
+  {user.role === "product manager"&& user.links && (
       <div>
-        {<div>
-          <p>Facebook:</p>
-          <p>{user.links.facebook}</p>
-          <p>Instagram:</p>
-          <p>{user.links.instagram}</p>
-          <p>Youtube:</p>
-          <p>{user.links.youtube}</p>
+        {<div className='flex'>
+          <a href={`${user.links.facebook}`}><p>Facebook</p></a>
+          <a className='mx-12' href={`${user.links.instagram}`}><p>Instagram</p></a>
+          <a href={`${user.links.youtube}`}><p>Youtube</p></a>
         </div>}
     </div>)}
 

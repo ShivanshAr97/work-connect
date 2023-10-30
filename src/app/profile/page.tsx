@@ -89,7 +89,7 @@ export default function Profile() {
               <option value="developer">Developer</option>
               <option value="designer">Designer</option>
               <option value="content specialist">Content Specialist</option>
-              <option value="product managers">Product Managers</option>
+              <option value="product manager">Product Managers</option>
             </select>
 
             <p className='my-4'>About:</p>
@@ -133,7 +133,7 @@ export default function Profile() {
                 </div>
               )
             }
-            {data.role === "product managers" && (
+            {data.role === "product manager" && (
                 <div className='flex items-center align-middle'>
                   <p className='my-4'>Facebook</p>
                   <input className='mx-2 border-2 my-2 rounded-md outline-none px-2 py-1' type="url" onChange={(e) => setData({ ...data, links: { ...data.links, facebook: e.target.value } })}  disabled={!editable} pattern=".*\facebook.com\.*"/>

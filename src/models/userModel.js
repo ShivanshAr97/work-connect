@@ -44,6 +44,9 @@ const userSchema = new mongoose.Schema({
         leetcode: {
             type: String,
         },
+        stackoverflow: {
+            type: String
+        },
         behance: {
             type: String,
         },
