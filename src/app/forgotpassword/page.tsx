@@ -2,18 +2,23 @@
 
 import axios from "axios"
 import React,{useEffect, useState} from "react"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation'
 
 export default function ForgotPasswordPage() {
-
+    const router = useRouter()
     const [token, setToken] = useState("")
     const [password, setPassword] = useState("")
 
     const save = async() =>{
         try {
             await axios.post("/api/users/forgotpassword", {token, password})
-
+            toast.success("Password changed successfully")
+            router.push('/signup')
         } catch (error:any) {
             console.log(error);
+            toast.error("Failed")
             
         }
     }
@@ -24,11 +29,18 @@ export default function ForgotPasswordPage() {
     }, []);
 
     return(
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-
-            <h1 className="text-4xl">Set Password</h1>
-            <input type="password" placeholder="Enter new password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-            <button onClick={save}>Save new</button>
+        <>
+        <div className="m-12">
+            <h1 className="text-4xl mb-8">Set Password</h1>
+            <hr />
+            <hr />
+            <div className="my-8">
+                <input className="border-2 rounded-md outline-none px-2 py-1" type="password" placeholder="Enter new password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                <button className="border bg-green-500 px-2 py-1 mx-4 rounded-md font-medium" onClick={save}>Save new</button>
+            </div>
         </div>
+        <ToastContainer />
+        </>
+        
     )
 }

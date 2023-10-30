@@ -1,6 +1,8 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -8,6 +10,7 @@ import { useRouter } from 'next/navigation'
 export default function Login() {
   
   const router = useRouter()
+  const [status, setStatus] = useState("")
   const [user, setUser] = useState({
     name:"",
     email:"",
@@ -23,7 +26,9 @@ export default function Login() {
       const resp = await axios.post("/api/users/login", user)
       console.log(resp.data);
       router.push('/signup')
+      toast.success(resp.data.message)
     } catch (err:any) {
+      toast.error("Email already registered")
       console.log(err);
     }finally{
       setLoading(false)
@@ -52,6 +57,7 @@ export default function Login() {
         <input placeholder='' type="password" value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})}/>
         <button onClick={onLogin}>{disabled?"No":"Log in"}</button>
         <Link href="/signup">Sign Up</Link>
+        <ToastContainer />
     </>
   )
 }

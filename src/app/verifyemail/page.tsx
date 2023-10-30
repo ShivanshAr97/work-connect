@@ -1,6 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import axios from "axios"
 import React,{useEffect, useState} from "react"
 
@@ -14,11 +17,12 @@ export default function VerifyEmailPage() {
         try {
             await axios.post("/api/users/verifyemail", {token})
             setIsVerified(true)
+            toast.success("Verification successful")
 
         } catch (error:any) {
             setError(false)
             console.log(error.response.data);
-            
+            toast.error("Verification failed")
         }
     }
 
@@ -54,6 +58,7 @@ export default function VerifyEmailPage() {
                     
                 </div>
             )}
+            <ToastContainer />
         </div>
     )
 }

@@ -19,10 +19,14 @@ export default function ForgotPasswordPage() {
     }
 
     return(
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1 className="text-4xl">Reset Password</h1>
-            <input type="email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-            <button onClick={resetPassword}>Reset</button>
+        <div className="m-12">
+            <h1 className="text-4xl mb-8">Reset Password</h1>
+            <hr />
+            <hr />
+            <div className="my-8">
+                <input className="border-2 rounded-md outline-none px-2 py-1" type="email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <button className="border bg-green-500 px-2 py-1 mx-4 rounded-md font-medium"  onClick={resetPassword}>Reset</button>
+            </div>
         </div>
     )
 }

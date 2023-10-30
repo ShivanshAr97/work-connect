@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
@@ -21,9 +23,10 @@ export default function Signup() {
       const resp = await axios.post("/api/users/signup", user)
       console.log(resp.data);
       router.push('/profile')
+      toast.success(resp.data.message)
     } catch (err:any) {
       console.log(err);
-      
+      toast.error("Email address or password incorrect")
     }finally{
       setLoading(false)
     }
@@ -50,6 +53,7 @@ export default function Signup() {
         <Link href="/login">Log in</Link>
         <br />
         <Link href="/resetpassword">Forgot Password</Link>
+        <ToastContainer />
     </>
   )
 }
