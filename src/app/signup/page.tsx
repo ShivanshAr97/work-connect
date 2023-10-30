@@ -60,7 +60,10 @@ export default function Signup() {
         <br />
         <button className="border bg-red-500 mt-4 px-2 py-1 rounded-md font-medium" onClick={onSignUp}>Sign up</button>
         </div>
-        <Link href="/login" className='text-blue-600 font-medium'>Log in instead</Link>
+        <a className='px-6 py-3 text-white bg-violet-800 rounded-md ' href='/api/auth/signin'>Sign in using Linkedin</a>
+        <br />
+        <br />
+        <Link href="/login" className='text-green-600 font-medium'>Log in instead</Link>
         <br />
         <ToastContainer />
     </div>
