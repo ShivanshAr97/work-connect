@@ -30,8 +30,6 @@ export async function PUT(request: NextRequest){
         return Math.floor(Math.random() * (18 - 0 + 1)) + 0;
     }
     const cal = rand()
-    console.log(cal);
-    console.log(photos[cal]);
     
     
     try {
