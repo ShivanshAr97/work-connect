@@ -89,13 +89,13 @@ export default function Signup() {
         <br />
         <br />
         <button
-          className=" text-base bg-c3 rounded-md mt-4 px-8 py-2 font-medium"
+          className="text-white text-base bg-c2 rounded-md mt-4 px-8 py-2 font-medium"
           onClick={onSignUp}
         >
           Sign up
         </button>
       </div>
-      <Link href="/login" className="text-green-600 font-medium">
+      <Link href="/login" className="text-c3 font-medium">
         Log in instead
       </Link>
       <br />
