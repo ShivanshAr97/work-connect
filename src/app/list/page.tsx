@@ -29,7 +29,7 @@ export default function List() {
             <hr />
             <div className="grid grid-cols-2">
       {users.map((user, index) => (
-        <Link href={`profile/${user._id}`}><div className="m-4 p-4 flex items-center align-middle border rounded-md" key={user._id}>
+        <Link key={user._id} href={`profile/${user._id}`}><div className="m-4 p-4 flex items-center align-middle border rounded-md">
           <Image
               src={user.photo}
               alt={user.name}
@@ -37,9 +37,9 @@ export default function List() {
               height={50}
             />
             {/* <img className="border rounded-full h-20 w-20 object-cover" key={index} src={user.photo} alt="" /> */}
-            <div className="p-4"  key={index}>
-            <p  key={index}>Name: {user.name}</p>
-            <p  key={index} className="capitalize">Role: {user.role}</p>
+            <div className="p-4">
+            <p>Name: {user.name}</p>
+            <p className="capitalize">Role: {user.role}</p>
             </div>
         </div></Link>
       ))}
