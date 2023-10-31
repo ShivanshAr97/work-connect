@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <>
       <div className="text-white text-8xl font-extrabold flex flex-col justify-center h-80">
-        <div className="pl-40">
-          <h1 className="text-c3 ">Get the Career</h1>
+        <div className="pl-40 mt-12">
+          <h1 className="text-c3 ">Get the People</h1>
           <h1 className="pl-72 ">That Suits Your</h1>
           <h1 className="text-c3 pl-96 ">
-            <span className="text-c2">~</span> Lifestyle{" "}
+            <span className="text-c2">~</span> Choice{" "}
             <span className="text-c2">~</span>
           </h1>
         </div>
@@ -29,55 +29,49 @@ export default function Home() {
           alt="group"
         />
       </div>
-      <div className="text-white text-3xl font-bold  pl-40 pt-16">
+      <div className="text-white flex text-3xl font-bold  pl-40 pt-28">
         <h1>
-          Find Your <span className="text-c3">Perfect Job</span>{" "}
+          Find Your <span className="text-c3">Perfect Find</span>{" "}
         </h1>
-        <h1>With Few Steps</h1>
+        <h1 className="mx-2">With Few Steps</h1>
       </div>
       <div className="flex justify-between text-neutral-50 px-40 pt-8 mb-20">
-        <div className="p-4 border-2 rounded-lg hover:bg-c1Light border-cBorder w-80 ">
-          <h1 className="text-xl font-semibold pb-2 w-40">
-            Complete Your Profile
+        <div className="p-4 m-4 border-2 rounded-lg hover:bg-c1Light border-cBorder w-80 ">
+          <h1 className="text-lg font-semibold pb-2 w-50">
+          Unlock Your Professional Potential
           </h1>
           <p className="text-l font-light text-neutral-300">
-            Complete your profile to provide all the necessary information and
-            details that will enhance your chances of finding the perfect job.
+          Build, Showcase, and Connect with Your Skills and Projects in Development, Design, Content Creation, and Marketing.
           </p>
         </div>
-        <div className="p-4 w-80 border-2 rounded-lg hover:bg-c1Light border-cBorder">
-          <h1 className="text-xl font-semibold pb-2 w-40">
-            Directly CV Upload
+        <div className="p-4 m-4 w-80 border-2 rounded-lg hover:bg-c1Light border-cBorder">
+          <h1 className="text-lg font-semibold pb-2 w-60">
+          Elevate Your Career Opportunities
           </h1>
           <p className="text-l font-light text-neutral-300">
-            Upload your CV directly to the platform to ensure that employers
-            have access to your detailed resume.
+          Curate your online presence with ease, syncing portfolios from multiple platforms, highlight your expertise for part-time, full-time, gig, or internships.
           </p>
         </div>
-        <div className="p-4 w-80 border-2 rounded-lg hover:bg-c1Light border-cBorder">
-          <h1 className="text-xl font-semibold pb-2 w-40">
-            Scheduling Interview
+        <div className="p-4  m-4 w-80 border-2 rounded-lg hover:bg-c1Light border-cBorder">
+          <h1 className="text-lg font-semibold pb-2 w-60">
+          Make a Lasting Impression
           </h1>
           <p className="text-l font-light text-neutral-300">
-            Select suitable time slots and arrange interviews with potential
-            employers at your convenience.
+          Stand out with a personal touch - add a 1-minute video testimonial to let your skills and personality shine on your WorkConnect profile.
           </p>
         </div>
       </div>
       <div className="px-40 flex justify-between gap-24">
-        <Image src="/work.jpg" height={300} width={350} alt="work" />
+        <Image className="mb-12" src="/work.jpg" height={300} width={350} alt="work" />
         <div className="">
           <h1 className="text-c3 text-l font-bold pt-16 leading-10">
             About Us
           </h1>
           <h3 className="text-white text-2xl font-medium pb-4">
-            Where great companies hire great people
+            Where great you find great people
           </h3>
           <p className="text-l font-light text-neutral-300">
-            WorkConnet is your go-to destination for finding the perfect job.
-            With a user-friendly platform and a vast range of job listings, we
-            make your job search easy and efficient. Join us today and take the
-            next step towards your dream career.
+          At WorkConnect, we're dedicated to revolutionizing how professionals in development, design, content creation, and marketing build their online portfolios and connect with job opportunities. We empower individuals at all career stages, offering a seamless platform to aggregate their work from multiple sources, add personalized 1-minute video testimonials, and denote their availability for part-time, full-time, gig, or internship roles. WorkConnect is not just a tool; it's a vibrant community where talent and opportunity converge, helping you unlock your true professional potential. Join us in redefining the way you showcase your skills and launch your career to new heights. Welcome to WorkConnect, where your success story begins.
           </p>
         </div>
       </div>

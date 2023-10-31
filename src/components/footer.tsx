@@ -41,9 +41,9 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h1 className="text-2xl font-medium pb-4">Your One Stop Job Shop</h1>
-          <input type="email" placeholder="Enter your Email" />
-          <button>Go</button>
+          <h1 className="text-2xl font-medium pb-4">Your One Stop Find</h1>
+          <input className="px-2 py-1 rounded-md" type="email" placeholder="Enter your Email" />
+          <button className="mx-2 px-3 py-0.5 border  bg-green-600 rounded-md">Go</button>
         </div>
       </div>
     </>
