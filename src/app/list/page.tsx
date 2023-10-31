@@ -28,7 +28,7 @@ export default function List() {
             <hr />
             <div className="grid grid-cols-2">
       {users.map((user, index) => (
-        <Link href={`profile/${user._id}`}><div className="m-4 p-4 flex items-center align-middle border rounded-md" key={index}>
+        <Link href={`profile/${user._id}`}><div className="m-4 p-4 flex items-center align-middle border rounded-md" key={user._id}>
             <img className="border rounded-full h-20 w-20 object-cover" key={index} src={user.photo} alt="" />
             <div className="p-4"  key={index}>
             <p  key={index}>Name: {user.name}</p>

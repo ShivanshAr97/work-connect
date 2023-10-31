@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image'
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -66,7 +67,13 @@ export default function UserProfile({ params }: any) {
           <hr />
           <div className="my-8">
             <div className='flex align-middle items-center'>
-            <img className='border rounded-full h-20 w-20 object-cover' src={user.profilePhoto} alt="" />
+            <Image
+              src={user.profilePhoto}
+              alt={user.name}
+              width={50}
+              height={50}
+            />
+            {/* <img className='border rounded-full h-20 w-20 object-cover' src={user.profilePhoto} alt="" /> */}
             <div className='mx-4'>
             <span className='text-2xl'>{user.name}</span>
             <p>{user.email}</p>
