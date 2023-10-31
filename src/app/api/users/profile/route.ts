@@ -5,7 +5,7 @@ import User from "@/models/userModel.js";
 connect()
 
 export async function PUT(request: NextRequest){
-    const photos = {
+    const photos:Record<number, string> = {
         0:"https://robohash.org/sintessequaerat.png?size=50x50&set=set1",
         1:"https://robohash.org/temporibusporrolaboriosam.png?size=50x50&set=set1",
         2:"https://robohash.org/laboriosamdolorepossimus.png?size=50x50&set=set1",
