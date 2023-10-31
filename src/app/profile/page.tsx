@@ -94,9 +94,9 @@ export default function Profile() {
 
             <p className='my-4'>About:</p>
 
-          <textarea className={editable?" border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows="5" cols="90" value={data.about} onChange={(e)=>setData({...data, about:e.target.value})} disabled={!editable} />
+          <textarea className={editable?" border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows={5} cols={90} value={data.about} onChange={(e)=>setData({...data, about:e.target.value})} disabled={!editable} />
           <p className='my-4'>Achievements:  </p>
-          <textarea className={editable?"border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows="5" cols="90" value={data.achievements} onChange={(e)=>setData({...data, achievements:e.target.value})} disabled={!editable} />
+          <textarea className={editable?"border-2 rounded-md px-2 py-1":" border-2 rounded-md px-2 py-1 opacity-40"} rows={5} cols={90} value={data.achievements} onChange={(e)=>setData({...data, achievements:e.target.value})} disabled={!editable} />
             
             {data.role === "designer" && (
                 <div className='flex items-center align-middle'>

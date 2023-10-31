@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import axios from "axios"
-import React,{useEffect, useState} from "react"
+import React,{useEffect, useState, useCallback} from "react"
 
 export default function VerifyEmailPage() {
 
@@ -13,7 +13,7 @@ export default function VerifyEmailPage() {
     const [isVerified, setIsVerified] = useState(false)
     const [error, setError] = useState(false)
 
-    const verifyUserEmail = async() =>{
+    const verifyUserEmail = useCallback(async () => {
         try {
             await axios.post("/api/users/verifyemail", {token})
             setIsVerified(true)
@@ -24,7 +24,7 @@ export default function VerifyEmailPage() {
             console.log(error.response.data);
             toast.error("Verification failed")
         }
-    }
+    }, []);
 
     useEffect(() => {
         const urlToken = window.location.search.split("=")[1];
