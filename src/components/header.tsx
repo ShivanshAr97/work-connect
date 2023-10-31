@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { NextRequest } from "next/server";
 
 const Header: React.FC = () => {
+  const token = "";
   return (
     <nav className="flex text-white justify-between items-center p-10">
       <div>
@@ -23,9 +25,9 @@ const Header: React.FC = () => {
           <Link href={"/"}>Contact</Link>
         </li>
       </ul>
-      <Link href={"/signup"}>
-        <button className="text-base bg-c2 rounded-full p-3">
-          Create Account
+      <Link href={"/profile"}>
+        <button className="text-lg bg-c2 rounded-full p-3">
+          {token !== "" ? "User" : "Sign In / Sign Up"}
         </button>
       </Link>
     </nav>
