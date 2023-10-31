@@ -76,19 +76,10 @@ const userSchema = new mongoose.Schema({
         description: {
             type: String
         },
-        video: {
+
+        github: {
             type: String
-        },
-        links: [
-            {
-                type: {
-                    type: String, // 'github' or 'hosted' or other types
-                },
-                url: {
-                    type: String,
-                },
-            },
-        ],
+        }
     },
     forgetPasswordToken: {
         type: String
