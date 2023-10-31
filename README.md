@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-WorkConnect is a professional profile building website designed to help job seekers, particularly in the fields of development, design, content creation, and marketing, create a comprehensive online portfolio. The platform's primary goal is to make it easy for users to aggregate their existing portfolios from various sources like GitHub, StackOverflow, Behance, Dribbble, and more. Users can also add additional projects and showcase their work, along with the option to include a 1-minute video testimonial. WorkConnect allows users to denote their availability for part-time, full-time,
-
-gigs, or internships, making it a versatile tool for professionals in various stages of their careers.
+WorkConnect is a professional profile building website designed to help job seekers, particularly in the fields of development, design, content creation, and marketing, create a comprehensive online portfolio. The platform's primary goal is to make it easy for users to aggregate their existing portfolios from various sources like GitHub, StackOverflow, Behance, Dribbble, and more. Users can also add additional projects and showcase their work, along with the option to include a 1-minute video testimonial. WorkConnect allows users to denote their availability for part-time, full-time, gigs, or internships, making it a versatile tool for professionals in various stages of their careers.
 
 ## Features
 
@@ -24,8 +22,8 @@ WorkConnect offers the following key features:
 
 WorkConnect is built using the following technologies:
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js
+- Frontend: HTML, TailwindCSS, TypeScript, NextJs, 
+- Backend: NextJs
 - Database: MongoDB
 - Authentication: JWT (JSON Web Tokens)
 - Third-party API integrations for data collection
@@ -48,10 +46,9 @@ WorkConnect is designed to address the specific needs of professionals looking t
 
 WorkConnect is a collaborative effort of a dedicated team of developers and designers. We are committed to improving and expanding the platform continuously.
 
-- John Doe - Frontend Developer
-- Jane Smith - Backend Developer
-- Sarah Wilson - UI/UX Designer
-- Michael Brown - Project Manager
+- Ravi Nain 
+- Shivansh Arora 
+
 
 ## Contribute
 
@@ -65,4 +62,4 @@ We welcome contributions from the community. If you would like to contribute to 
 
 ## Feedback
 
-Your feedback is essential to help us improve WorkConnect. If you encounter issues, have suggestions, or would like to share your thoughts, please feel free to [contact us](mailto:feedback@workconnect.com). We appreciate your input and will do our best to address your concerns.
+Your feedback is essential to help us improve WorkConnect. If you encounter issues, have suggestions, or would like to share your thoughts, please feel free to [contact us](mailto:shivanshAr97@gmail.com). We appreciate your input and will do our best to address your concerns.
