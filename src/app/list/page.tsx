@@ -36,8 +36,10 @@ export default function List() {
               <Image src={user.photo} alt={user.name} width={50} height={50} />
               {/* <img className="border rounded-full h-20 w-20 object-cover" key={index} src={user.photo} alt="" /> */}
               <div className="p-4">
-                <p>Name: {user.name}</p>
-                <p className="capitalize">
+                <p className="font-bold">
+                  Name: <span className="font-normal">{user.name}</span>
+                </p>
+                <p className="font-bold">
                   Role: <span className="text-c3">{user.role}</span>
                 </p>
               </div>

@@ -76,12 +76,12 @@ export default function UserProfile({ params }: any) {
                 <p>{user.email}</p>
               </div>
             </div>
-            <p className="text-xs mt-4">Role: </p>
-            <p className="capitalize text-lg">{user.role}</p>
-            <p className="my-2 text-xs">Video: </p>
+            <p className="text-xl font-extrabold mt-4">Role: </p>
+            <p className="capitalize text-base">{user.role}</p>
+            <p className="text-xl font-extrabold mt-4">Video: </p>
             {user.video && (
               <iframe
-                className="mx-auto rounded-md my-4"
+                className="mx-auto rounded-md my-2"
                 width="400"
                 height="250"
                 src={user.video}
@@ -89,11 +89,11 @@ export default function UserProfile({ params }: any) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               ></iframe>
             )}
-            <p className="my-2 text-xs">About:</p>
+            <p className="text-xl font-extrabold my-2">About:</p>
             <p> {user.about}</p>
-            <p className="my-2 text-xs">Achievements:</p>
+            <p className="text-xl font-extrabold my-2">Achievements:</p>
             <p> {user.achievements}</p>
-            <p className="my-2 text-xs">Links</p>
+            <p className="text-xl font-extrabold my-2">Links:</p>
             {user.role === "developer" && user.links && (
               <div>
                 {

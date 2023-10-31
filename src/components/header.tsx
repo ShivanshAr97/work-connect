@@ -1,9 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { NextRequest } from "next/server";
+// import React, { useState } from "react";
 
-const Header: React.FC = () => {
-  const token = "";
+import Link from "next/link";
+
+const Header = () => {
+  // const [toggle, setToggle] = useState(false);
+
+  // const handleClick = () => {
+  //   setToggle(!toggle);
+  // };
   return (
     <nav className="flex text-white justify-between items-center p-10">
       <div>
@@ -24,10 +28,17 @@ const Header: React.FC = () => {
         <li>
           <Link href={"/"}>Contact</Link>
         </li>
+        <li>
+          <Link href={"/list"}>Candidate</Link>
+        </li>
       </ul>
       <Link href={"/profile"}>
-        <button className="text-lg bg-c2 rounded-full p-3">
-          {token !== "" ? "User" : "Sign In / Sign Up"}
+        <button
+          className="text-base bg-c2 rounded-md mt-4 px-8 py-2 font-medium"
+          // onClick={handleClick}
+        >
+          {/* {toggle ? "User" : "Sign In / Sign Up"} */}
+          User
         </button>
       </Link>
     </nav>
