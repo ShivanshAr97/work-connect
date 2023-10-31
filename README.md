@@ -89,5 +89,15 @@ We're continually improving WorkConnect, and your feedback is essential in this 
 ![image](https://github.com/ShivanshAr97/work-connect/assets/96040322/0888520e-e098-4d1c-a564-9bfd89a02a8b)
 ![image](https://github.com/ShivanshAr97/work-connect/assets/96040322/9da81f04-ac14-4086-92e9-a6d436fc1d3b)
 
+---
+### List of candidates
+![image](https://github.com/ShivanshAr97/work-connect/assets/96040322/9d101f5f-3ffa-4e39-bce0-8073610dd097)
+
+---
+
+### Profile of a single user
+
+![image](https://github.com/ShivanshAr97/work-connect/assets/96040322/9306d688-57e2-41c7-b9ed-bb9b870a3a56)
+![image](https://github.com/ShivanshAr97/work-connect/assets/96040322/26e6b0df-53d1-4f76-b963-24599848cf5b)
 
 
