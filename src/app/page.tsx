@@ -71,7 +71,7 @@ export default function Home() {
             Where great you find great people
           </h3>
           <p className="text-l font-light text-neutral-300">
-          At WorkConnect, we're dedicated to revolutionizing how professionals in development, design, content creation, and marketing build their online portfolios and connect with job opportunities. We empower individuals at all career stages, offering a seamless platform to aggregate their work from multiple sources, add personalized 1-minute video testimonials, and denote their availability for part-time, full-time, gig, or internship roles. WorkConnect is not just a tool; it's a vibrant community where talent and opportunity converge, helping you unlock your true professional potential. Join us in redefining the way you showcase your skills and launch your career to new heights. Welcome to WorkConnect, where your success story begins.
+          At WorkConnect, we&apos;re dedicated to revolutionizing how professionals in development, design, content creation, and marketing build their online portfolios and connect with job opportunities. We empower individuals at all career stages, offering a seamless platform to aggregate their work from multiple sources, add personalized 1-minute video testimonials, and denote their availability for part-time, full-time, gig, or internship roles. WorkConnect is not just a tool; it&apos;s a vibrant community where talent and opportunity converge, helping you unlock your true professional potential. Join us in redefining the way you showcase your skills and launch your career to new heights. Welcome to WorkConnect, where your success story begins.
           </p>
         </div>
       </div>

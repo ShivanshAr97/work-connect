@@ -72,20 +72,20 @@ export default function Signup() {
           value={user.password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         />
-        <br />
         <Link
           href="/resetpassword"
-          className="text-c2 text-sm underline underline-offset-2"
+          className="text-c2 mx-12 text-sm underline underline-offset-2"
         >
           Forgot Password
         </Link>
         <br />
-        <a
-          className="text-c2 text-sm underline underline-offset-2 "
-          href="/api/auth/signin"
+        <button
+          className="text-white text-base bg-violet-800 rounded-md mt-8 -mb-4 px-8 py-2 font-medium">
+          <a href="/api/auth/signin"
         >
           Sign in using Linkedin
         </a>
+        </button>
         <br />
         <br />
         <button
